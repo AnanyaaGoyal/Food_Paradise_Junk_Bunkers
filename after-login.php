@@ -43,7 +43,7 @@ session_start();
      
                      while($data= mysqli_fetch_array($query)){
                      $community= $data['community_name'];
-                    echo "<a class='dropdown-item' href='#'>".$community. "</a>";
+                    echo "<a class='dropdown-item' href='".$community.".php'>".$community. "</a>";
                     }
                      ?>
                       </div>

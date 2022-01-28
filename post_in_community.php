@@ -46,16 +46,16 @@
 
             <div class="form-group">
                 <label for="Recipe Name">Recipe Name:</label>
-                <input type="text" name="recipe-name" class="form-control" id="Recipe Name" placeholder="Recipe Name">
+                <input type="text" name="recipe-names" class="form-control" id="Recipe Name" placeholder="Recipe Name">
             </div>
             <div class="form-group">
                 <label for="pwd">Recipe:</label>
-                <textarea class="form-control" name="recipe" id="Recipe" placeholder="Write recipe here" rows="4"
+                <textarea class="form-control" name="recipes" id="Recipe" placeholder="Write recipe here" rows="4"
                     cols="50"></textarea>
             </div>
             <div class="form-group">
                 <label for="file">Select image</label>
-                <input type="file" name="image" id="file"  multiple>
+                <input type="file" name="images" id="file"  multiple>
             </div>
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -66,7 +66,7 @@
               <input type="password" class="form-control" id="pwd" name="password" placeholder="password">
             </div>
             <center> <button type="reset" class="btn btn-primary"> Reset </button>
-                <button type="submit"  value="start upload" name="post-recipe" class="btn btn-primary">Post</button>
+                <button type="submit"  value="start upload" name="post-recipes" class="btn btn-primary">Post</button>
             </center>
         </form>
     </div>

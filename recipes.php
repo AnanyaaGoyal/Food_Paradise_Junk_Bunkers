@@ -41,13 +41,13 @@ session_start();
      
                      while($data= mysqli_fetch_array($query)){
                      $community= $data['community_name'];
-                    echo "<a class='dropdown-item' href='#'>".$community. "</a>";
+                    echo "<a class='dropdown-item' href='".$community.".php'>".$community. "</a>";
                     }
                      ?>
                       </div>
                     </li>
                     <li class='nav-item' style='margin-left:15px;'>
-                      <a class='nav-link' href='#'>Recipes</a>
+                      <a class='nav-link' href='recipes.php'>Recipes</a>
                       </li>
                    <li class='nav-item' style='margin-left:15px;'>
                   <a class='nav-link' href='create_community.php'>Create a Community</a>

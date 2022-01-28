@@ -6,7 +6,12 @@
 
 <?php
 session_start();
-include('connection.php');
+$dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "Capstone_pass";
+ $db = "food_paradise";
+ $c =mysqli_connect($dbhost,$dbuser,$dbpass,$db) ;
+
 
 if(isset($_POST['post-recipe'])){
   $chef= $_SESSION["username"];
@@ -16,12 +21,12 @@ if(isset($_POST['post-recipe'])){
   $tmp_name=$_FILES['image']['tmp_name'];
 move_uploaded_file("$tmp_name", "uploads/$image");
   
-  $insert=mysqli_query($c, "insert into post (recipe_name, recipe, image, chef) values( '$recipe_name', '$recipe', '$image', '$chef')");
- if($insert){ echo "<script> alert('uploaded successfully'); window.location='recipes.php'</script>";}
+$query= mysqli_query($c, "insert into post(recipe_name, recipe, image, chef) values ('{$recipe_name}', '{$recipe}', '{$image}','{$chef}')") or die ("error in query".mysqli_error($c));
+ if($query){ echo "<script> alert('uploaded successfully'); window.location='recipes.php'</script>";}
 
     
     else{
-        echo "<script>alert('incorrect password or username'); window.location='post.html' </script>";
+        echo "<script>alert('something is wrong'); window.location='post.html' </script>";
     }
 
 }
